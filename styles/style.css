@@ -1,0 +1,97 @@
+/* 
+ * Todo: Add variables like --size-xs (xtra small), --size-sm (small), --size-lg (large) for different rem sizes (0.75rem, 0.85rem, 1rem, 1.25rem)
+ * */
+*{
+  margin: 0;
+  box-sizing: border-box;
+  line-height: calc(1em + 0.5rem);
+}
+
+:root{
+  --clr-yellow: hsl(47, 88%, 63%);
+  --clr-white: hsl(0, 0%, 100%);
+  --clr-grey: hsl(0, 0%, 50%);
+  --clr-black: hsl(0, 0%, 7%);
+}
+
+body{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: var(--clr-yellow);
+  font-family: "Figtree";
+}
+
+.container {
+  width: 320px;
+  height: 440px;
+  background-color: var(--clr-white);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  border: 2px solid var(--clr-black);
+  box-shadow: 0.75rem 0.75rem var(--clr-black);
+}
+
+.card-img{
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+}
+
+.card-category{
+  background: var(--clr-yellow);
+  width: fit-content;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-weight: 800;
+  font-size: 0.75rem;
+}
+
+.card-publish-date{
+  font-size: 0.75rem;
+}
+
+.card-title{
+  font-size: 1.25rem;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.card-title:hover{
+  color: var(--clr-yellow);
+}
+
+.card-description{
+  max-height: 30ch;
+  color: var(--clr-grey);
+  font-size: 0.85rem;
+}
+
+.card-author{
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.card-author__img{
+  width: 1.75rem;
+  height: 1.75rem;
+}
+
+.card-author__name{
+  font-size: 0.75rem;
+  font-weight: 800;
+}
+
+.attribution { font-size: 11px; text-align: center; margin-top: 20px;}
+.attribution a { color: hsl(228, 45%, 44%); }
+
+@media(max-width: 325px){
+  .container{
+    width: 100%;
+  }
+}
